@@ -1,0 +1,5 @@
+patient_type: healthy
+severity: healthy
+affected_muscle: vasti_l
+retained_force_fraction: 1.0
+notes: Compatibility input for the verified loader; no Human muscle parameter is changed.

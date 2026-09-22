@@ -1,0 +1,532 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260822_214246__HUMAN_EXO_HEALTHY100_ZERO",
+  "timestamp": "2026-08-22T21:42:46",
+  "experiment_name": "HUMAN_EXO_HEALTHY100_ZERO",
+  "experiment_type": "human_exo_control",
+  "human_model": "MyoAssist 22-muscle 2D healthy baseline",
+  "human_condition": "healthy100",
+  "human_xml_path": "models/humans/myoassist/source/models/22muscle_2D/myoLeg22_2D_BASELINE.xml",
+  "human_xml_sha256": "ffe9976762eb5b591d85a0bc0d33f26659a03f9b06be574dcf2d9dec18e3aa6b",
+  "patient_type": "healthy",
+  "pathology_target": "vasti_l",
+  "affected_muscles": [
+    "vasti_l"
+  ],
+  "strength_scale": 1.0,
+  "retained_fmax_percent": 100.0,
+  "healthy_fmax_N": 9500.94,
+  "actual_fmax_N": 9500.94,
+  "patient_config_path": "models/humans/patients/healthy.yaml",
+  "patient_config_sha256": "27c1a2a586d85385e5f295e77ce4d7ca7a3cc8e19b38de580d4aeb58a390b7f0",
+  "exo_enabled": true,
+  "exo_model": "independent planar 8 kg bilateral hip-knee exoskeleton",
+  "exo_model_version": "m5_independent_planar_exo_v1",
+  "exo_mass_kg": 8.0,
+  "coupled_xml_path": "models/coupled/flexible_exo/healthy_exo_nature_flexible_v1.xml",
+  "coupled_xml_sha256": "4b3190bd40a40be9c26613d99d2e32e2737ce5650df88bfba96e4935f3f83892",
+  "human_controller": "official MyoAssist 2D reflex controller",
+  "human_controller_type": "reflex",
+  "human_controller_optimized_for": "healthy_flexible_exo_zero_torque",
+  "source_initialization": "healthy_exo_corrected_controller",
+  "human_controller_parameter_path": "results/healthy_flexible_exo/controller/healthy_flexible_controller_v1.txt",
+  "human_controller_parameter_count": 77,
+  "human_controller_parameter_sha256": "0538dfbe31bfe35cca07e2b01eea11cf5a4219c09f09dfce1ad588810ba3e536",
+  "assist_controller": "zero",
+  "assist_parameters": {},
+  "requested_duration_s": 20.0,
+  "actual_duration_s": 20.00000000000146,
+  "control_timestep_s": 0.01,
+  "mujoco_timestep_s": 0.001,
+  "target_velocity_mps": 1.25,
+  "seed": 0,
+  "human_mass_kg": 83.42146649200214,
+  "total_model_mass_kg": 91.42146649200214,
+  "save_video": true,
+  "strap_visualization": true,
+  "strap_hud": true,
+  "strap_visualization_physics_coupled": false,
+  "strap_force_visual_reference_n": 200.0,
+  "timeseries_schema_version": "3.1",
+  "coupling_mode": "nature_2024_linear_bushing",
+  "coupling_version": "m5_v1",
+  "parameter_set": "NATURE_2024_EXACT_PLUS_OUR_HIP_KNEE_EXTENSION",
+  "active_interfaces": [
+    "waist",
+    "thigh_l",
+    "thigh_r",
+    "shank_l",
+    "shank_r"
+  ],
+  "disabled_interfaces": [],
+  "exo_dynamics": "planar_independent",
+  "physics_coupling_rate_hz": 1000.0,
+  "rigid_baseline": "corrected_hip_knee_exo_v1",
+  "coupling_topology": "OUR_HIP_KNEE_WAIST_ROTATION_AND_AP_EXTENSION",
+  "shank_parameter_source": "Nature leg-strap transferred baseline",
+  "nature_original_topology": "waist + bilateral thigh",
+  "nature_exact_topology": false,
+  "diagnostic_knee_lock": false,
+  "diagnostic_knee_lock_references_rad": {},
+  "diagnostic_relative_pitch_lock": false,
+  "diagnostic_relative_pitch_reference_rad": null,
+  "diagnostic_waist_ap_lock": false,
+  "diagnostic_waist_ap_reference_m": null,
+  "physics_timeseries_schema_version": "1.0",
+  "waist_rotation_parameter_set": "OUR_HIP_KNEE_WAIST_ROTATION_V1_1",
+  "waist_rotation_stiffness_nm_per_rad": 165.0,
+  "waist_rotation_damping_nms_per_rad": 13.5,
+  "waist_rotation_parameter_source": "small local tightening around M5.6 V1; selected from V1, stiffer, more-damped, and stiffer-plus-more-damped 2 s comparisons",
+  "waist_translation_parameter_set": "OUR_HIP_KNEE_WAIST_TRANSLATION_V1",
+  "waist_ap_translation_stiffness_n_per_m": 1500.0,
+  "waist_ap_translation_damping_ns_per_m": 60.0,
+  "waist_translation_parameter_source": "M5 Case-E relative-AP-lock diagnosis plus three bounded 2 s finite candidates; LOW retained finite compliance and was promoted after the initial MEDIUM selection failed the 5 s pelvis-height gate",
+  "git_branch": "main",
+  "git_commit": "96529e16e48553d0f1cda6fe11ab2d6ba8543d60",
+  "python_version": "3.11.15",
+  "success": true,
+  "termination_reason": "time_limit",
+  "requested_duration_seconds": 20.0,
+  "walking_duration_seconds": 20.00000000000146,
+  "terminated_early": false,
+  "finite_state": true,
+  "damage_verification": {
+    "affected_actuator_index": 18,
+    "healthy_gain_force_N": 9500.94,
+    "healthy_bias_force_N": 9500.94,
+    "retained_force_fraction": 1.0,
+    "applied_gain_force_N": 9500.94,
+    "applied_bias_force_N": 9500.94,
+    "changed_gain_entries": [],
+    "changed_bias_entries": [],
+    "only_vasti_l_force_scale_changed": true
+  },
+  "model_dimensions": {
+    "nq": 60,
+    "nv": 60,
+    "nu": 26
+  },
+  "exoskeleton_channels_all_zero": {
+    "HipExo_R": true,
+    "HipExo_L": true,
+    "KneeExo_R": true,
+    "KneeExo_L": true,
+    "Exo_R": null,
+    "Exo_L": null
+  },
+  "coupling_substep_count": 20000,
+  "coupling_summary": {
+    "physics_substeps": 20000,
+    "interfaces": {
+      "waist": {
+        "translation": [
+          0.02296667719610263,
+          -0.019847535937343383,
+          4.014089137038129e-18
+        ],
+        "translation_velocity": [
+          0.21742152528014047,
+          -0.16580935049525708,
+          3.182986658143564e-17
+        ],
+        "rotation": [
+          -1.0864676033922803e-18,
+          -2.856099183523886e-19,
+          -0.000756586249734896
+        ],
+        "rotation_velocity": [
+          -1.3612635767402542e-18,
+          4.73248474397755e-17,
+          0.2562471214483693
+        ],
+        "force": [
+          43.37436319966957,
+          0.03290954603995493,
+          -161.60118146113896
+        ],
+        "moment": [
+          0.0,
+          -3.3344993392025906,
+          -0.000679059760154512
+        ],
+        "force_local": [
+          47.49530731096234,
+          -160.43838100369956,
+          -4.85722573273506e-17
+        ],
+        "moment_local": [
+          -2.8155375166732943e-18,
+          1.0842021724855044e-19,
+          3.3344994083467263
+        ],
+        "translation_norm": 0.030354455096643022,
+        "translation_velocity_norm": 0.27343163746501936,
+        "rotation_norm": 0.000756586249734896,
+        "rotation_velocity_norm": 0.2562471214483693,
+        "force_norm": 167.32088427823658,
+        "moment_norm": 3.3344994083467268,
+        "force_local_norm": 167.32088427823652,
+        "moment_local_norm": 3.3344994083467263,
+        "translation_norm_peak": 0.05909860505846289,
+        "translation_norm_rms": 0.017257671964257464,
+        "translation_norm_p95": 0.03363168732602329,
+        "rotation_norm_peak": 0.01714960128848337,
+        "rotation_norm_rms": 0.006326791086960317,
+        "rotation_norm_p95": 0.010646254730075739,
+        "force_norm_peak": 261.32625825740297,
+        "force_norm_rms": 90.77002368576053,
+        "force_norm_p95": 162.85867788574285,
+        "moment_norm_peak": 8.347589683232188,
+        "moment_norm_rms": 1.994282921525328,
+        "moment_norm_p95": 3.674466509615808
+      },
+      "thigh_l": {
+        "translation": [
+          0.021314441055032274,
+          -0.011477017517243861,
+          3.1980575956533364e-17
+        ],
+        "translation_velocity": [
+          -0.08401816860283698,
+          -0.12433170381990048,
+          3.6458760756571805e-17
+        ],
+        "rotation": [
+          1.3174748399220286e-18,
+          -1.4263374471443218e-18,
+          -0.033557162427603426
+        ],
+        "rotation_velocity": [
+          1.7227157027641186e-16,
+          -6.030630536744941e-16,
+          -1.6685022107577272
+        ],
+        "force": [
+          27.27267852596168,
+          0.0032820805167692235,
+          -16.116542249594733
+        ],
+        "moment": [
+          2.0798068214507664e-16,
+          2.004073793477312,
+          0.0004081229987158807
+        ],
+        "force_local": [
+          31.13147989652002,
+          -5.862840462441827,
+          4.819885809914659e-14
+        ],
+        "moment_local": [
+          1.9431613436371453e-16,
+          -6.407634839389331e-17,
+          -2.0040738350337604
+        ],
+        "translation_norm": 0.024208001333847613,
+        "translation_velocity_norm": 0.15005807285892417,
+        "rotation_norm": 0.033557162427603426,
+        "rotation_velocity_norm": 1.6685022107577272,
+        "force_norm": 31.678730069803557,
+        "moment_norm": 2.004073835033761,
+        "force_local_norm": 31.678730069803542,
+        "moment_local_norm": 2.0040738350337604,
+        "translation_norm_peak": 0.04455783941793852,
+        "translation_norm_rms": 0.01350929228020409,
+        "translation_norm_p95": 0.025702366368953206,
+        "rotation_norm_peak": 0.15970668575255598,
+        "rotation_norm_rms": 0.03402690484553753,
+        "rotation_norm_p95": 0.07556814890742955,
+        "force_norm_peak": 44.69551216680221,
+        "force_norm_rms": 13.115413253536017,
+        "force_norm_p95": 27.936043538596916,
+        "moment_norm_peak": 4.106432704174081,
+        "moment_norm_rms": 0.7014734511131099,
+        "moment_norm_p95": 1.5475749714818279
+      },
+      "thigh_r": {
+        "translation": [
+          0.009155674276851515,
+          -0.024887209466822782,
+          1.1299419516372367e-18
+        ],
+        "translation_velocity": [
+          0.05658871050630367,
+          -0.19805177439251312,
+          4.1940032575280254e-17
+        ],
+        "rotation": [
+          -8.00422618289748e-18,
+          1.1863521176560517e-17,
+          -0.03973671547239421
+        ],
+        "rotation_velocity": [
+          -3.774722689995928e-17,
+          -1.6365648958767083e-16,
+          -0.728542009293235
+        ],
+        "force": [
+          16.82276985718901,
+          0.0018359705181422439,
+          -9.015469386896967
+        ],
+        "moment": [
+          -1.0342901995812575e-16,
+          1.1259091406703392,
+          0.00022928767207444878
+        ],
+        "force_local": [
+          14.299398520340302,
+          -12.641656507803896,
+          2.011411870395108e-15
+        ],
+        "moment_local": [
+          -1.1179479651041158e-16,
+          1.6859343782149594e-17,
+          -1.1259091640171766
+        ],
+        "translation_norm": 0.02651791029680344,
+        "translation_velocity_norm": 0.20597763834161503,
+        "rotation_norm": 0.03973671547239421,
+        "rotation_velocity_norm": 0.728542009293235,
+        "force_norm": 19.08623266401233,
+        "moment_norm": 1.125909164017177,
+        "force_local_norm": 19.086232664012325,
+        "moment_local_norm": 1.1259091640171766,
+        "translation_norm_peak": 0.054323506919177755,
+        "translation_norm_rms": 0.013198785163564302,
+        "translation_norm_p95": 0.024531673773695813,
+        "rotation_norm_peak": 0.13925837508537375,
+        "rotation_norm_rms": 0.035225172452311014,
+        "rotation_norm_p95": 0.07595666850988855,
+        "force_norm_peak": 42.76280604648498,
+        "force_norm_rms": 13.152203905347477,
+        "force_norm_p95": 26.850149910628364,
+        "moment_norm_peak": 3.474138409146939,
+        "moment_norm_rms": 0.7036949351929094,
+        "moment_norm_p95": 1.6396596848307308
+      },
+      "shank_l": {
+        "translation": [
+          0.0032430016830831128,
+          -0.00018381015148017478,
+          -4.652677863884987e-17
+        ],
+        "translation_velocity": [
+          -0.23238968041182692,
+          -0.19603293330443772,
+          -2.503051275435667e-17
+        ],
+        "rotation": [
+          7.631745869465696e-19,
+          9.465455206395362e-18,
+          -0.09414128662393481
+        ],
+        "rotation_velocity": [
+          -1.0529179857484255e-16,
+          -5.2930633703893503e-17,
+          0.6287890430073417
+        ],
+        "force": [
+          1.6412063462628363,
+          0.0003992735961988497,
+          -1.9606191097940335
+        ],
+        "moment": [
+          -5.4787551025321847e-17,
+          0.31262381674944284,
+          6.36648061450109e-05
+        ],
+        "force_local": [
+          2.540605720506398,
+          -0.2879380090445254,
+          -7.00012964260921e-14
+        ],
+        "moment_local": [
+          -1.0296532506823275e-16,
+          1.8831236483357605e-17,
+          -0.31262382323200627
+        ],
+        "translation_norm": 0.0032482065956873905,
+        "translation_velocity_norm": 0.30402939743033597,
+        "rotation_norm": 0.09414128662393481,
+        "rotation_velocity_norm": 0.6287890430073417,
+        "force_norm": 2.556870298650747,
+        "moment_norm": 0.3126238232320064,
+        "force_local_norm": 2.5568702986507468,
+        "moment_local_norm": 0.31262382323200627,
+        "translation_norm_peak": 0.04407224443817004,
+        "translation_norm_rms": 0.01135604627689617,
+        "translation_norm_p95": 0.022553701225829965,
+        "rotation_norm_peak": 0.10188294819002583,
+        "rotation_norm_rms": 0.03638044351575134,
+        "rotation_norm_p95": 0.07643316134523395,
+        "force_norm_peak": 23.81679177391771,
+        "force_norm_rms": 7.050707994878851,
+        "force_norm_p95": 12.652298668699448,
+        "moment_norm_peak": 2.6595051806260326,
+        "moment_norm_rms": 0.7067012097841218,
+        "moment_norm_p95": 1.5640367497477548
+      },
+      "shank_r": {
+        "translation": [
+          0.0029943613809912807,
+          -0.025665616962722536,
+          -1.4775981545082917e-16
+        ],
+        "translation_velocity": [
+          -0.12045486476104159,
+          -0.190331301412648,
+          4.243008116924256e-17
+        ],
+        "rotation": [
+          1.0124168747053302e-17,
+          -5.17167393177763e-17,
+          -0.03270523670427114
+        ],
+        "rotation_velocity": [
+          -2.6952480367320883e-17,
+          -3.472223792044601e-17,
+          -0.18546592857411343
+        ],
+        "force": [
+          6.106367063795428,
+          0.002436271355618826,
+          -11.963225773889423
+        ],
+        "moment": [
+          1.148806582207441e-16,
+          0.512518284989252,
+          0.0001043726533658224
+        ],
+        "force_local": [
+          3.2869934238765053,
+          -13.023139782773908,
+          -2.2118027895312586e-13
+        ],
+        "moment_local": [
+          7.059511395596241e-17,
+          -1.5817154443847903e-16,
+          -0.5125182956168246
+        ],
+        "translation_norm": 0.025839699962599466,
+        "translation_velocity_norm": 0.22524515253836894,
+        "rotation_norm": 0.03270523670427114,
+        "rotation_velocity_norm": 0.18546592857411343,
+        "force_norm": 13.431548517214086,
+        "moment_norm": 0.5125182956168247,
+        "force_local_norm": 13.431548517214082,
+        "moment_local_norm": 0.5125182956168246,
+        "translation_norm_peak": 0.05210085770571816,
+        "translation_norm_rms": 0.0107888468503825,
+        "translation_norm_p95": 0.019406800663881035,
+        "rotation_norm_peak": 0.0988474042648678,
+        "rotation_norm_rms": 0.03598974799305423,
+        "rotation_norm_p95": 0.07548369284799296,
+        "force_norm_peak": 26.56169217902466,
+        "force_norm_rms": 6.746674861924964,
+        "force_norm_p95": 11.007954491628974,
+        "moment_norm_peak": 3.2694784523629976,
+        "moment_norm_rms": 0.692837924062421,
+        "moment_norm_p95": 1.5022140680613958
+      }
+    }
+  },
+  "strap_visualization_summary": {
+    "physics_coupled": false,
+    "render_only_user_scene_geoms": true,
+    "hud_pixel_overlay": true,
+    "force_visual_reference_n": 200.0,
+    "frame_count": 501,
+    "peak_waist_force_n": 242.83551697505033,
+    "peak_waist_ap_displacement_mm": 53.40600098353529,
+    "peak_waist_ap_force_n": 108.24761378523104,
+    "peak_waist_rotation_deg": 0.9662716186877125
+  },
+  "artifacts": {
+    "manifest": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/manifest.json",
+    "timeseries": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/timeseries.csv",
+    "validation": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/validation.json",
+    "video": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/video.mp4",
+    "physics_timeseries_1khz": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/physics_timeseries_1khz.csv"
+  },
+  "evaluation": {
+    "requested": true,
+    "protocol": "human_exoskeleton_v1",
+    "status": "completed",
+    "summary": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/summary.json",
+    "metrics": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/evaluation.csv",
+    "overview": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/00_overview.png",
+    "figures": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/figures",
+    "healthy_reference_result": null
+  },
+  "regression": {
+    "protocol": "healthy100_flexible_zero_20s_regression_v1",
+    "reference": {
+      "duration_s": 20.00000000000146,
+      "mean_forward_velocity_mps": 1.2531296055321168
+    },
+    "current": {
+      "duration_s": 20.00000000000146,
+      "mean_forward_velocity_mps": 1.2531296055321168,
+      "exo_zero_torque_verified": true,
+      "m5_bounded": true
+    },
+    "tolerance": {
+      "duration_s": 0.02,
+      "mean_forward_velocity_mps": 0.1
+    },
+    "checks": {
+      "exo_zero_torque": true,
+      "m5_bounded": true,
+      "duration": true,
+      "speed": true,
+      "completed_20s": true
+    },
+    "passed": true
+  },
+  "pipeline_checks": {
+    "patient_damage": {
+      "human_condition": "healthy100",
+      "target_muscle": "vasti_l",
+      "retained_fmax_fraction": 1.0,
+      "retained_fmax_percent": 100.0,
+      "healthy_fmax_N": 9500.94,
+      "actual_fmax_N": 9500.94,
+      "checks": {
+        "condition_matches": true,
+        "target_is_vasti_l": true,
+        "only_vasti_l_scaled": true,
+        "actual_fmax_matches_damage_injection": true
+      },
+      "passed": true
+    },
+    "checks": {
+      "patient_damage": true,
+      "frozen_flexible_xml": true,
+      "frozen_human_controller": true,
+      "five_interface_topology": true,
+      "zero_command_and_actual_torque": true,
+      "required_result_artifacts": true,
+      "video": true
+    },
+    "passed": true,
+    "m5_bounded": {
+      "actual_physics_substeps": 20000,
+      "expected_physics_substeps": 20000,
+      "interfaces": [
+        "shank_l",
+        "shank_r",
+        "thigh_l",
+        "thigh_r",
+        "waist"
+      ],
+      "checks": {
+        "finite_state": true,
+        "physics_substeps_complete": true,
+        "five_interfaces_present": true,
+        "interaction_statistics_finite": true
+      },
+      "passed": true,
+      "interpretation": "Numerical boundedness check, not a comfort or hardware-safety threshold."
+    }
+  }
+}

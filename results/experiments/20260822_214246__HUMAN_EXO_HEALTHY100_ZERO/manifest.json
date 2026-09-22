@@ -1,0 +1,170 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20260822_214246__HUMAN_EXO_HEALTHY100_ZERO",
+  "timestamp": "2026-08-22T21:42:46",
+  "experiment_name": "HUMAN_EXO_HEALTHY100_ZERO",
+  "experiment_type": "human_exo_control",
+  "human_model": "MyoAssist 22-muscle 2D healthy baseline",
+  "human_condition": "healthy100",
+  "human_xml_path": "models/humans/myoassist/source/models/22muscle_2D/myoLeg22_2D_BASELINE.xml",
+  "human_xml_sha256": "ffe9976762eb5b591d85a0bc0d33f26659a03f9b06be574dcf2d9dec18e3aa6b",
+  "patient_type": "healthy",
+  "pathology_target": "vasti_l",
+  "affected_muscles": [
+    "vasti_l"
+  ],
+  "strength_scale": 1.0,
+  "retained_fmax_percent": 100.0,
+  "healthy_fmax_N": 9500.94,
+  "actual_fmax_N": 9500.94,
+  "patient_config_path": "models/humans/patients/healthy.yaml",
+  "patient_config_sha256": "27c1a2a586d85385e5f295e77ce4d7ca7a3cc8e19b38de580d4aeb58a390b7f0",
+  "exo_enabled": true,
+  "exo_model": "independent planar 8 kg bilateral hip-knee exoskeleton",
+  "exo_model_version": "m5_independent_planar_exo_v1",
+  "exo_mass_kg": 8.0,
+  "coupled_xml_path": "models/coupled/flexible_exo/healthy_exo_nature_flexible_v1.xml",
+  "coupled_xml_sha256": "4b3190bd40a40be9c26613d99d2e32e2737ce5650df88bfba96e4935f3f83892",
+  "human_controller": "official MyoAssist 2D reflex controller",
+  "human_controller_type": "reflex",
+  "human_controller_optimized_for": "healthy_flexible_exo_zero_torque",
+  "source_initialization": "healthy_exo_corrected_controller",
+  "human_controller_parameter_path": "results/healthy_flexible_exo/controller/healthy_flexible_controller_v1.txt",
+  "human_controller_parameter_count": 77,
+  "human_controller_parameter_sha256": "0538dfbe31bfe35cca07e2b01eea11cf5a4219c09f09dfce1ad588810ba3e536",
+  "assist_controller": "zero",
+  "assist_parameters": {},
+  "requested_duration_s": 20.0,
+  "actual_duration_s": 20.00000000000146,
+  "control_timestep_s": 0.01,
+  "mujoco_timestep_s": 0.001,
+  "target_velocity_mps": 1.25,
+  "seed": 0,
+  "human_mass_kg": 83.42146649200214,
+  "total_model_mass_kg": 91.42146649200214,
+  "save_video": true,
+  "strap_visualization": true,
+  "strap_hud": true,
+  "strap_visualization_physics_coupled": false,
+  "strap_force_visual_reference_n": 200.0,
+  "timeseries_schema_version": "3.1",
+  "coupling_mode": "nature_2024_linear_bushing",
+  "coupling_version": "m5_v1",
+  "parameter_set": "NATURE_2024_EXACT_PLUS_OUR_HIP_KNEE_EXTENSION",
+  "active_interfaces": [
+    "waist",
+    "thigh_l",
+    "thigh_r",
+    "shank_l",
+    "shank_r"
+  ],
+  "disabled_interfaces": [],
+  "exo_dynamics": "planar_independent",
+  "physics_coupling_rate_hz": 1000.0,
+  "rigid_baseline": "corrected_hip_knee_exo_v1",
+  "coupling_topology": "OUR_HIP_KNEE_WAIST_ROTATION_AND_AP_EXTENSION",
+  "shank_parameter_source": "Nature leg-strap transferred baseline",
+  "nature_original_topology": "waist + bilateral thigh",
+  "nature_exact_topology": false,
+  "diagnostic_knee_lock": false,
+  "diagnostic_knee_lock_references_rad": {},
+  "diagnostic_relative_pitch_lock": false,
+  "diagnostic_relative_pitch_reference_rad": null,
+  "diagnostic_waist_ap_lock": false,
+  "diagnostic_waist_ap_reference_m": null,
+  "physics_timeseries_schema_version": "1.0",
+  "waist_rotation_parameter_set": "OUR_HIP_KNEE_WAIST_ROTATION_V1_1",
+  "waist_rotation_stiffness_nm_per_rad": 165.0,
+  "waist_rotation_damping_nms_per_rad": 13.5,
+  "waist_rotation_parameter_source": "small local tightening around M5.6 V1; selected from V1, stiffer, more-damped, and stiffer-plus-more-damped 2 s comparisons",
+  "waist_translation_parameter_set": "OUR_HIP_KNEE_WAIST_TRANSLATION_V1",
+  "waist_ap_translation_stiffness_n_per_m": 1500.0,
+  "waist_ap_translation_damping_ns_per_m": 60.0,
+  "waist_translation_parameter_source": "M5 Case-E relative-AP-lock diagnosis plus three bounded 2 s finite candidates; LOW retained finite compliance and was promoted after the initial MEDIUM selection failed the 5 s pelvis-height gate",
+  "git_branch": "main",
+  "git_commit": "96529e16e48553d0f1cda6fe11ab2d6ba8543d60",
+  "python_version": "3.11.15",
+  "success": true,
+  "termination_reason": "time_limit",
+  "evaluation": {
+    "requested": true,
+    "protocol": "human_exoskeleton_v1",
+    "status": "completed",
+    "summary": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/summary.json",
+    "metrics": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/evaluation.csv",
+    "overview": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/00_overview.png",
+    "figures": "results/experiments/20260822_214246__HUMAN_EXO_HEALTHY100_ZERO/evaluation/figures",
+    "healthy_reference_result": null
+  },
+  "regression": {
+    "protocol": "healthy100_flexible_zero_20s_regression_v1",
+    "reference": {
+      "duration_s": 20.00000000000146,
+      "mean_forward_velocity_mps": 1.2531296055321168
+    },
+    "current": {
+      "duration_s": 20.00000000000146,
+      "mean_forward_velocity_mps": 1.2531296055321168,
+      "exo_zero_torque_verified": true,
+      "m5_bounded": true
+    },
+    "tolerance": {
+      "duration_s": 0.02,
+      "mean_forward_velocity_mps": 0.1
+    },
+    "checks": {
+      "exo_zero_torque": true,
+      "m5_bounded": true,
+      "duration": true,
+      "speed": true,
+      "completed_20s": true
+    },
+    "passed": true
+  },
+  "pipeline_checks": {
+    "patient_damage": {
+      "human_condition": "healthy100",
+      "target_muscle": "vasti_l",
+      "retained_fmax_fraction": 1.0,
+      "retained_fmax_percent": 100.0,
+      "healthy_fmax_N": 9500.94,
+      "actual_fmax_N": 9500.94,
+      "checks": {
+        "condition_matches": true,
+        "target_is_vasti_l": true,
+        "only_vasti_l_scaled": true,
+        "actual_fmax_matches_damage_injection": true
+      },
+      "passed": true
+    },
+    "checks": {
+      "patient_damage": true,
+      "frozen_flexible_xml": true,
+      "frozen_human_controller": true,
+      "five_interface_topology": true,
+      "zero_command_and_actual_torque": true,
+      "required_result_artifacts": true,
+      "video": true
+    },
+    "passed": true,
+    "m5_bounded": {
+      "actual_physics_substeps": 20000,
+      "expected_physics_substeps": 20000,
+      "interfaces": [
+        "shank_l",
+        "shank_r",
+        "thigh_l",
+        "thigh_r",
+        "waist"
+      ],
+      "checks": {
+        "finite_state": true,
+        "physics_substeps_complete": true,
+        "five_interfaces_present": true,
+        "interaction_statistics_finite": true
+      },
+      "passed": true,
+      "interpretation": "Numerical boundedness check, not a comfort or hardware-safety threshold."
+    }
+  }
+}

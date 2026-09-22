@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mujoco model="simple_ankle_exo">
+    <compiler angle="radian"/>
+    <option timestep="0.001" gravity="0 0 -9.81"/>
+    <visual>
+        <global offwidth="1280" offheight="720"/>
+    </visual>
+
+    <worldbody>
+        <light name="key" pos="1 -2 3" dir="-1 2 -3" directional="true"/>
+        <geom name="floor" type="plane" pos="0 0 0" size="2 2 0.01" rgba="0.75 0.78 0.82 1"/>
+
+        <!-- Standalone right assembly. The foot hinge is the right ankle joint. -->
+        <body name="exo_r_shank" pos="0 0.15 0.08">
+            <inertial mass="1.0" pos="0 0 0.20" diaginertia="0.01417 0.00137 0.01387"/>
+            <geom name="exo_r_shank_frame" type="box" pos="0 0 0.20" size="0.04 0.05 0.20" rgba="0.12 0.45 0.82 0.85"/>
+            <body name="exo_r_foot" pos="0 0 0">
+                <joint name="exo_ankle_r" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.8 0.8" damping="0.05"/>
+                <inertial mass="0.5" pos="0.12 0 0.04" diaginertia="0.000471 0.003533 0.003471"/>
+                <geom name="exo_r_foot_frame" type="box" pos="0.12 0 0.04" size="0.14 0.06 0.04" rgba="0.12 0.45 0.82 0.85"/>
+            </body>
+        </body>
+
+        <!-- Standalone left assembly, placed beside the right assembly for viewing. -->
+        <body name="exo_l_shank" pos="0.65 0.15 0.08">
+            <inertial mass="1.0" pos="0 0 0.20" diaginertia="0.01417 0.00137 0.01387"/>
+            <geom name="exo_l_shank_frame" type="box" pos="0 0 0.20" size="0.04 0.05 0.20" rgba="0.82 0.30 0.16 0.85"/>
+            <body name="exo_l_foot" pos="0 0 0">
+                <joint name="exo_ankle_l" type="hinge" pos="0 0 0" axis="0 1 0" range="-0.8 0.8" damping="0.05"/>
+                <inertial mass="0.5" pos="0.12 0 0.04" diaginertia="0.000471 0.003533 0.003471"/>
+                <geom name="exo_l_foot_frame" type="box" pos="0.12 0 0.04" size="0.14 0.06 0.04" rgba="0.82 0.30 0.16 0.85"/>
+            </body>
+        </body>
+    </worldbody>
+
+    <actuator>
+        <motor name="Exo_R" joint="exo_ankle_r" gear="1" ctrlrange="-50 50" ctrllimited="true"/>
+        <motor name="Exo_L" joint="exo_ankle_l" gear="1" ctrlrange="-50 50" ctrllimited="true"/>
+    </actuator>
+</mujoco>

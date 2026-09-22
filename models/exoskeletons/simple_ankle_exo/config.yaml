@@ -1,0 +1,48 @@
+model:
+  name: simple_ankle_exo
+  xml_path: simple_ankle_exo.xml
+  description: Idealized bilateral ankle exoskeleton for engineering validation.
+components:
+  right_shank:
+    body: exo_r_shank
+    mass_kg: 1.0
+    length_m: 0.40
+    half_size_m: [0.04, 0.05, 0.20]
+    center_of_mass_local_m: [0.0, 0.0, 0.20]
+    diagonal_inertia_kg_m2: [0.01417, 0.00137, 0.01387]
+  right_foot:
+    body: exo_r_foot
+    mass_kg: 0.5
+    length_m: 0.28
+    half_size_m: [0.14, 0.06, 0.04]
+    center_of_mass_local_m: [0.12, 0.0, 0.04]
+    diagonal_inertia_kg_m2: [0.000471, 0.003533, 0.003471]
+  left_shank:
+    body: exo_l_shank
+    mass_kg: 1.0
+    length_m: 0.40
+    half_size_m: [0.04, 0.05, 0.20]
+    center_of_mass_local_m: [0.0, 0.0, 0.20]
+    diagonal_inertia_kg_m2: [0.01417, 0.00137, 0.01387]
+  left_foot:
+    body: exo_l_foot
+    mass_kg: 0.5
+    length_m: 0.28
+    half_size_m: [0.14, 0.06, 0.04]
+    center_of_mass_local_m: [0.12, 0.0, 0.04]
+    diagonal_inertia_kg_m2: [0.000471, 0.003533, 0.003471]
+mass:
+  per_side_kg: 1.5
+  total_kg: 3.0
+alignment:
+  reference_model: models/humans/myoassist/source/models/22muscle_2D/myoLeg22_2D_BASELINE.xml
+  shank_length_m: 0.40
+  standalone_display_ankle_axis: [0, 1, 0]
+  coupled_human_ankle_axis: [0, 0, 1]
+actuators:
+  - name: Exo_R
+    joint: exo_ankle_r
+    control_units: Nm
+  - name: Exo_L
+    joint: exo_ankle_l
+    control_units: Nm

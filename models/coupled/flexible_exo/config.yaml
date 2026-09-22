@@ -1,0 +1,25 @@
+model:
+  name: healthy_myoassist_with_nature_flexible_hip_knee_exo
+  version: healthy_exo_nature_flexible_v1
+  xml_path: healthy_exo_nature_flexible_v1.xml
+  source_rigid_version: corrected_hip_knee_exo_v1
+  source_rigid_sha256: cc06bf0747753ec5a41c0a0dcb613ff0aa8587c58c27ecfb726b252155f78c2f
+  human_xml: models/humans/myoassist/source/models/22muscle_2D/myoLeg22_2D_BASELINE.xml
+  exo_dynamics: planar_independent
+  coupling_mode: nature_2024_linear_bushing
+  parameter_set: NATURE_2024_EXACT
+  active_interfaces: [waist, thigh_l, thigh_r]
+  disabled_interfaces: [shank_l, shank_r]
+mass:
+  configured_exoskeleton_kg: 8.0
+  pelvis_frame_kg: 3.6
+  hip_module_each_kg: 0.7
+  thigh_bar_each_kg: 1.2
+  knee_module_each_kg: 0.15
+  shank_bar_each_kg: 0.15
+actuators:
+  HipExo_R: exo_hip_r
+  HipExo_L: exo_hip_l
+  KneeExo_R: exo_knee_r
+  KneeExo_L: exo_knee_l
+  human_joint_bypass: false

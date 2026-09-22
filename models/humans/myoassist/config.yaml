@@ -1,0 +1,13 @@
+repository:
+  url: https://github.com/neumovelab/myoassist.git
+  commit: c10883728bbe20894d1ab59b848d3f4ba57c2a29
+
+model:
+  name: MyoAssist 22-muscle 2D baseline
+  mujoco_name: template
+  xml_path: source/models/22muscle_2D/myoLeg22_2D_BASELINE.xml
+  dimensions:
+    nq: 53
+    nv: 53
+    nu: 22
+  muscle_count: 22

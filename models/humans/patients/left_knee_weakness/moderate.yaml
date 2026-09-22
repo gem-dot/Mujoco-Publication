@@ -1,0 +1,15 @@
+patient_type: bilateral_knee_extensor_weakness
+severity: moderate
+affected_side: bilateral
+affected_muscle: vasti_l
+affected_muscles:
+  - vasti_l
+  - vasti_r
+healthy_max_isometric_force_N:
+  vasti_l: 9500.94
+  vasti_r: 9500.94
+retained_force_fraction: 0.6
+damaged_max_isometric_force_N:
+  vasti_l: 5700.564
+  vasti_r: 5700.564
+description: Bilateral vasti maximum force reduced to 60 percent of each healthy value.

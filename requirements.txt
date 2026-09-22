@@ -1,0 +1,19 @@
+# Unified Python 3.11 environment for model viewing and MyoAssist reflex walking.
+numpy==2.2.6
+mujoco==3.3.3
+PyYAML==6.0.3
+gymnasium==0.29.1
+dm-control==1.0.31
+scipy==1.17.1
+matplotlib==3.11.1
+termcolor==3.3.0
+flatten-dict==0.5.0
+h5py==3.12.1
+Pillow==12.3.0
+pink-noise-rl==2.0.1
+packaging==26.1
+GitPython==3.1.58
+click==8.4.2
+cma==4.0.0
+sk-video==1.1.10
+imageio[ffmpeg]==2.37.0

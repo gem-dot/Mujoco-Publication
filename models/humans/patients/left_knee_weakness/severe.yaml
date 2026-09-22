@@ -1,0 +1,8 @@
+patient_type: left_knee_extensor_weakness
+severity: severe
+affected_side: left
+affected_muscle: vasti_l
+healthy_max_isometric_force_N: 9500.94
+retained_force_fraction: 0.4
+damaged_max_isometric_force_N: 3800.376
+description: Left vasti maximum force reduced to 40 percent of the healthy value.

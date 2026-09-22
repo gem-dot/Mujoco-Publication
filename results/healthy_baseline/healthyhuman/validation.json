@@ -1,0 +1,8 @@
+{
+  "walking_duration_seconds": 20.00000000000146,
+  "walking_metrics": {
+    "mean_forward_velocity_m_per_s": 1.25905776453207,
+    "max_abs_pelvis_pitch_deg": 23.465395959389625
+  },
+  "publication_note": "Minimal path-free regression reference extracted from the validated internal Healthy Human run."
+}

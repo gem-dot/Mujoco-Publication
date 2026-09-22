@@ -1,0 +1,28 @@
+model:
+  name: healthy_myoassist_with_simple_hip_knee_exo
+  version: corrected_hip_knee_exo_v1
+  frozen: true
+  frozen_date: 2026-08-06
+  xml_path: healthy_exo.xml
+  human_xml: models/humans/myoassist/source/models/22muscle_2D/myoLeg22_2D_BASELINE.xml
+  coupling: rigid_body_attachment_no_independent_exoskeleton_dofs
+  assistance_enabled: false
+components:
+  pelvis_frame: {body: exo_pelvis_frame, mass_kg: 3.6, attachment_pos_pelvis_local_m: [-0.1507, -0.04, 0.0], battery_dimensions_m: [0.11, 0.20, 0.20], diagonal_inertia_kg_m2: [0.0337194, 0.0073206, 0.0350406]}
+  hip_module_right: {body: exo_r_hip_module, mass_kg: 0.7, attachment_pos_femur_local_m: [0.0, 0.0, 0.055], axis_alignment: human_joint_local_z, diagonal_inertia_kg_m2: [0.0011025, 0.0011025, 0.00126]}
+  hip_module_left: {body: exo_l_hip_module, mass_kg: 0.7, attachment_pos_femur_local_m: [0.0, 0.0, -0.055], axis_alignment: human_joint_local_z, diagonal_inertia_kg_m2: [0.0011025, 0.0011025, 0.00126]}
+  thigh_bar_right: {body: exo_r_thigh_bar, mass_kg: 1.2, attachment_pos_femur_local_m: [0.0, 0.0, 0.055], length_m: 0.40, center_of_mass_local_m: [0.0, -0.10, 0.0], effective_inertial_length_m: 0.20, diagonal_inertia_kg_m2: [0.00425, 0.00074, 0.00449]}
+  thigh_bar_left: {body: exo_l_thigh_bar, mass_kg: 1.2, attachment_pos_femur_local_m: [0.0, 0.0, -0.055], length_m: 0.40, center_of_mass_local_m: [0.0, -0.10, 0.0], effective_inertial_length_m: 0.20, diagonal_inertia_kg_m2: [0.00425, 0.00074, 0.00449]}
+  knee_module_right: {body: exo_r_knee_module, mass_kg: 0.15, attachment_pos_tibia_local_m: [0.0, 0.0, 0.055], axis_alignment: human_joint_local_z, diagonal_inertia_kg_m2: [0.000195, 0.000195, 0.0001875]}
+  knee_module_left: {body: exo_l_knee_module, mass_kg: 0.15, attachment_pos_tibia_local_m: [0.0, 0.0, -0.055], axis_alignment: human_joint_local_z, diagonal_inertia_kg_m2: [0.000195, 0.000195, 0.0001875]}
+  shank_bar_right: {body: exo_r_shank_bar, mass_kg: 0.15, attachment_pos_tibia_local_m: [0.0, 0.0, 0.055], length_m: 0.40, diagonal_inertia_kg_m2: [0.0020313, 0.0000763, 0.002045]}
+  shank_bar_left: {body: exo_l_shank_bar, mass_kg: 0.15, attachment_pos_tibia_local_m: [0.0, 0.0, -0.055], length_m: 0.40, diagonal_inertia_kg_m2: [0.0020313, 0.0000763, 0.002045]}
+mass:
+  configured_exoskeleton_kg: 8.0
+  per_side_kg: 2.2
+  pelvis_frame_kg: 3.6
+  distribution: proximal
+actuators:
+  active_project_channels: [HipExo_R, HipExo_L, KneeExo_R, KneeExo_L]
+  dormant_reserved_channels: [Exo_R, Exo_L]
+  all_zero_assistance: true
